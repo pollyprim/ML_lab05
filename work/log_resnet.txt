@@ -1,0 +1,8 @@
+nohup: ignoring input
+loading train:   0%|          | 0/5 [00:00<?, ?it/s]                                                    loading val:   0%|          | 0/5 [00:00<?, ?it/s]                                                  model=resnet trainable_params=8530196 device=cpu
+resnet | epoch  1 | train loss 3.130 | val loss 3.245 | train acc 0.000 | val acc 0.000
+resnet | epoch  5 | train loss 1.481 | val loss 2.893 | train acc 1.000 | val acc 0.000
+resnet | epoch 10 | train loss 0.520 | val loss 2.639 | train acc 1.000 | val acc 0.200
+resnet | epoch 15 | train loss 0.517 | val loss 2.561 | train acc 1.000 | val acc 0.200
+resnet: best validation accuracy 0.200 | training time 1.5s
+DONE resnet 0.2 0.2 1.5162415504455566
