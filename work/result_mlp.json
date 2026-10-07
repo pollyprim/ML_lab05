@@ -1,0 +1,10 @@
+{
+ "model": "mlp",
+ "best_val_acc": 1.0,
+ "final_val_acc": 1.0,
+ "train_time_s": 47.4,
+ "params": 13118996,
+ "epochs": 30,
+ "lr": 0.001,
+ "img_size": 64
+}

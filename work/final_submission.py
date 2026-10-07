@@ -70,5 +70,5 @@ assert list(sub.columns) == ["id", "label"]
 assert sub.id.tolist() == test_table.id.tolist()
 assert sub.label.between(0, NUM_CLASSES - 1).all()
 sub.to_csv(OUT, index=False)
-torch.save(model.state_dict(), "model_final.pt")
+torch.save(model, "model_final.pt")
 print(f"submission saved to {OUT} ({len(sub)} rows) in {time.time()-t0:.1f}s; train time {dt:.1f}s")

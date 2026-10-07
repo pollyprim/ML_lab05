@@ -7,7 +7,9 @@ import numpy as np, pandas as pd, torch, torch.nn as nn
 from torchvision import transforms, models
 from common import *
 
-DATA = Path("/workspace/work/data")   # will be repointed to real data
+import os
+# DATA_DIR env var or ./data by default; must contain train.csv, val.csv and train/, val/ image folders
+DATA = Path(os.environ.get("DATA_DIR", str(Path(__file__).resolve().parent / "data")))
 train_table = pd.read_csv(DATA / "train.csv", dtype={"id": str})
 val_table = pd.read_csv(DATA / "val.csv", dtype={"id": str})
 
@@ -81,7 +83,7 @@ print(f"mode={mode} trainable={count_parameters(model)} epochs={epochs} lr={lr}"
 history, best_acc, dt = train_model(model, mode, train_set, val_set, epochs=epochs, lr=lr,
                                     weight_decay=wd, mixup_alpha=mixup, log_every=2)
 history.to_csv(f"history_{mode}.csv", index=False)
-torch.save(model.state_dict(), f"model_{mode}.pt")
+torch.save(model, f"model_{mode}.pt")
 _, final_acc = evaluate(model, val_set)
 json.dump({"mode": mode, "best_val_acc": best_acc, "final_val_acc": final_acc,
            "train_time_s": round(dt,1), "params": count_parameters(model),

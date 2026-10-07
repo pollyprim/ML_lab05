@@ -1,0 +1,9 @@
+nohup: ignoring input
+loading train:   0%|          | 0/600 [00:00<?, ?it/s]loading train:  72%|███████▏  | 432/600 [00:00<00:00, 4318.77it/s]                                                                  loading val:   0%|          | 0/120 [00:00<?, ?it/s]                                                    final | epoch  1 | train loss 2.808 | val loss 2.796 | train acc 0.104 | val acc 0.283
+final | epoch  5 | train loss 1.838 | val loss 1.129 | train acc 0.258 | val acc 0.683
+final | epoch 10 | train loss 1.290 | val loss 0.678 | train acc 0.410 | val acc 0.783
+final | epoch 15 | train loss 1.072 | val loss 0.657 | train acc 0.222 | val acc 0.808
+final | epoch 20 | train loss 1.239 | val loss 0.661 | train acc 0.493 | val acc 0.783
+final | epoch 25 | train loss 1.418 | val loss 0.552 | train acc 0.531 | val acc 0.842
+final: best validation accuracy 0.850 | training time 578.8s
+loading test:   0%|          | 0/240 [00:00<?, ?it/s]loading test:  40%|███▉      | 95/240 [00:00<00:00, 948.76it/s]                                                               submission saved to final_submission_full_test.csv (240 rows) in 2.2s; train time 578.8s
