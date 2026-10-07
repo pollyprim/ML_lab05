@@ -6,4 +6,7 @@ __pycache__/
 *.pt
 
 # Logs
-*.log
+*.logwork/synthetic/
+work/data_test/
+work/*_test.csv
+work/log_final_smoke.txt
