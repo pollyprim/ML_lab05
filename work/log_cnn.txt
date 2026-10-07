@@ -1,0 +1,11 @@
+nohup: ignoring input
+loading train:   0%|          | 0/5 [00:00<?, ?it/s]                                                    loading val:   0%|          | 0/5 [00:00<?, ?it/s]                                                  model=cnn trainable_params=4197908 device=cpu
+cnn | epoch  1 | train loss 3.007 | val loss 3.712 | train acc 0.000 | val acc 0.000
+cnn | epoch  5 | train loss 0.838 | val loss 6.359 | train acc 0.600 | val acc 0.000
+cnn | epoch 10 | train loss 0.731 | val loss 8.011 | train acc 0.600 | val acc 0.000
+cnn | epoch 15 | train loss 0.056 | val loss 8.401 | train acc 1.000 | val acc 0.000
+cnn | epoch 20 | train loss 0.048 | val loss 8.877 | train acc 1.000 | val acc 0.000
+cnn | epoch 25 | train loss 0.121 | val loss 9.100 | train acc 1.000 | val acc 0.000
+cnn | epoch 30 | train loss 0.104 | val loss 9.116 | train acc 1.000 | val acc 0.000
+cnn: best validation accuracy 0.200 | training time 1.6s
+DONE cnn 0.2 0.2 1.6005165576934814

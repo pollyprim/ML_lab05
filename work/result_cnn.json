@@ -1,0 +1,10 @@
+{
+ "model": "cnn",
+ "best_val_acc": 0.2,
+ "final_val_acc": 0.2,
+ "train_time_s": 1.6,
+ "params": 4197908,
+ "epochs": 30,
+ "lr": 0.001,
+ "img_size": 64
+}

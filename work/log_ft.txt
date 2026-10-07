@@ -1,0 +1,6 @@
+nohup: ignoring input
+loading train:   0%|          | 0/5 [00:00<?, ?it/s]                                                    loading val:   0%|          | 0/5 [00:00<?, ?it/s]                                                  mode=finetune trainable=11312980 epochs=2 lr=0.0001
+finetune | epoch  1 | train loss 3.177 | val loss 3.139 | train acc 0.000 | val acc 0.000
+finetune | epoch  2 | train loss 2.927 | val loss 3.140 | train acc 0.000 | val acc 0.000
+finetune: best validation accuracy 0.000 | training time 0.7s
+DONE finetune 0.0 0.0 0.6636292934417725
