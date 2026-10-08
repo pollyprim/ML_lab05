@@ -1,10 +1,11 @@
 """Diagnostics: compare train vs val image statistics (artifacts)."""
+import os, sys
 import numpy as np, pandas as pd
 from PIL import Image
 from pathlib import Path
-import torch, torch.nn.functional as F
 
-DATA = Path("/workspace/work/data")
+arg = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("DATA_DIR", "./data")
+DATA = Path(arg)
 tt = pd.read_csv(DATA/"train.csv", dtype={"id":str}); vt = pd.read_csv(DATA/"val.csv", dtype={"id":str})
 
 def stats(folder, ids):

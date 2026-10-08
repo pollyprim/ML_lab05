@@ -5,7 +5,8 @@ import numpy as np, pandas as pd, torch, torch.nn as nn
 from torchvision import transforms, models
 from common import *
 
-DATA = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("/workspace/week5_data")
+import os
+DATA = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(os.environ.get("DATA_DIR", "./data"))
 OUT = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("final_submission.csv")
 IMG_SIZE = int(sys.argv[3]) if len(sys.argv) > 3 else 128
 
@@ -70,5 +71,5 @@ assert list(sub.columns) == ["id", "label"]
 assert sub.id.tolist() == test_table.id.tolist()
 assert sub.label.between(0, NUM_CLASSES - 1).all()
 sub.to_csv(OUT, index=False)
-torch.save(model.state_dict(), "model_final.pt")
+torch.save(model, "model_final.pt")
 print(f"submission saved to {OUT} ({len(sub)} rows) in {time.time()-t0:.1f}s; train time {dt:.1f}s")

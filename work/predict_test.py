@@ -4,7 +4,8 @@ from pathlib import Path
 import numpy as np, pandas as pd, torch
 from common import *
 
-DATA = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("/workspace/week5_data")
+import os
+DATA = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(os.environ.get("DATA_DIR", "./data"))
 ckpt, out = sys.argv[2], sys.argv[3]
 IMG_SIZE = int(sys.argv[4]) if len(sys.argv) > 4 else 128
 

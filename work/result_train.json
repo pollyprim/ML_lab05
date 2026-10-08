@@ -1,10 +1,10 @@
 {
  "mode": "train",
- "best_val_acc": 0.0,
- "final_val_acc": 0.0,
- "train_time_s": 0.3,
+ "best_val_acc": 0.12160228898426323,
+ "final_val_acc": 0.12160228898426323,
+ "train_time_s": 13241.8,
  "params": 8530196,
- "epochs": 1,
+ "epochs": 25,
  "lr": 0.0003,
  "img_size": 128
 }

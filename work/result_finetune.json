@@ -1,10 +1,10 @@
 {
  "mode": "finetune",
- "best_val_acc": 0.0,
- "final_val_acc": 0.0,
- "train_time_s": 0.7,
+ "best_val_acc": 0.1659513590844063,
+ "final_val_acc": 0.1659513590844063,
+ "train_time_s": 3240.6,
  "params": 11312980,
- "epochs": 2,
+ "epochs": 25,
  "lr": 0.0001,
  "img_size": 128
 }

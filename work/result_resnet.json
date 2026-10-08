@@ -1,8 +1,8 @@
 {
  "model": "resnet",
- "best_val_acc": 0.2,
- "final_val_acc": 0.2,
- "train_time_s": 1.5,
+ "best_val_acc": 0.8226037195994278,
+ "final_val_acc": 0.8226037195994278,
+ "train_time_s": 370.6,
  "params": 8530196,
  "epochs": 15,
  "lr": 0.0003,

@@ -7,7 +7,8 @@ import torch, torch.nn as nn
 from torchvision import transforms, models
 from common import *
 
-DATA = Path("/workspace/work/data")
+import os
+DATA = Path(os.environ.get("DATA_DIR", str(Path(__file__).resolve().parent / "data")))
 train_table = pd.read_csv(DATA / "train.csv", dtype={"id": str})
 val_table = pd.read_csv(DATA / "val.csv", dtype={"id": str})
 
@@ -50,7 +51,7 @@ def make_models():
         nn.Linear(128, 128), nn.ReLU(), nn.Dropout(0.3),
         nn.Linear(128, NUM_CLASSES),
     )
-    return {"mlp": mlp, "cnn": cnn, "adv_cnn": advcnn}
+    return {"mlp": mlp, "cnn": cnn, "advcnn": advcnn}
 
 def make_resnet():
     backbone = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
@@ -78,7 +79,7 @@ else:
 print(f"model={which} trainable_params={count_parameters(model)} device={DEVICE}")
 history, best_acc, dt = train_model(model, which, train_set, val_set, epochs=epochs, lr=lr)
 history.to_csv(f"history_{which}.csv", index=False)
-torch.save(model.state_dict(), f"model_{which}.pt")
+torch.save(model, f"model_{which}.pt")
 # final accuracy with restored best weights on held-out val
 _, final_acc = evaluate(model, val_set)
 json.dump({"model": which, "best_val_acc": best_acc, "final_val_acc": final_acc,

@@ -1,0 +1,10 @@
+{
+ "model": "advcnn",
+ "best_val_acc": 0.5321888412017167,
+ "final_val_acc": 0.5321888412017167,
+ "train_time_s": 917.1,
+ "params": 159156,
+ "epochs": 30,
+ "lr": 0.001,
+ "img_size": 64
+}

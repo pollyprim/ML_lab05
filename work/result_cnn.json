@@ -1,8 +1,8 @@
 {
  "model": "cnn",
- "best_val_acc": 0.2,
- "final_val_acc": 0.2,
- "train_time_s": 1.6,
+ "best_val_acc": 0.5550786838340487,
+ "final_val_acc": 0.5550786838340487,
+ "train_time_s": 283.8,
  "params": 4197908,
  "epochs": 30,
  "lr": 0.001,
