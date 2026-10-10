@@ -1,8 +1,8 @@
 {
  "model": "mlp",
- "best_val_acc": 0.3333333333333333,
- "final_val_acc": 0.3333333333333333,
- "train_time_s": 178.3,
+ "best_val_acc": 1.0,
+ "final_val_acc": 1.0,
+ "train_time_s": 47.4,
  "params": 13118996,
  "epochs": 30,
  "lr": 0.001,

@@ -1,0 +1,10 @@
+{
+ "mode": "fit-train-val",
+ "img_size": 64,
+ "epochs": 10,
+ "tta": true,
+ "clean_train": false,
+ "rows": 240,
+ "train_time_s": 75.6,
+ "predict_time_s": 3.0
+}

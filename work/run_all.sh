@@ -20,6 +20,10 @@ echo "=== Experiment 6: final model ablations (128px, robust aug) ==="
 DATA_DIR=$DATA_DIR python3 final_experiment.py train 25
 DATA_DIR=$DATA_DIR python3 final_experiment.py finetune 25
 DATA_DIR=$DATA_DIR python3 final_experiment.py scratch 40
-echo "=== Final pipeline: train on train+val, predict test -> final_submission.csv ==="
-python3 final_submission.py "$DATA_DIR" final_submission.csv 128
+echo "=== Experiment 7: robust holdout eval (train only, honest val acc on clean val) ==="
+python3 robust.py "$DATA_DIR" sub_holdout.csv 160 25 --holdout
+echo "=== Experiment 8: ablation - clean training without artifact augmentation ==="
+python3 robust.py "$DATA_DIR" sub_abl.csv 160 25 --holdout --clean-train
+echo "=== Final pipeline: robust ResNet-18 trained on train+val, TTA predict test -> final_submission.csv ==="
+python3 robust.py "$DATA_DIR" final_submission.csv 160 25
 echo "ALL DONE"
